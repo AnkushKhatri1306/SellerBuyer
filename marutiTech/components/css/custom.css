@@ -1,0 +1,93 @@
+/*text-align-center*/
+.t-a-c{
+    text-align: center;
+}
+
+.main-div {
+    width: 400px;
+    margin-top: 50px;
+}
+/*padding left zero*/
+.p-l-z{
+    padding-left: 0px;
+}
+.p-z-px{
+ padding: 0px;
+}
+.m-t-5px{
+    margin-top: 5px;
+}
+.m-t-22px{
+    margin-top: 22px;
+}
+.m-b-5px{
+    margin-bottom: 5px;
+}
+.m-b-10px{
+    margin-bottom: 10px;
+}
+thead{
+    background-color: #f0f0f0;
+}
+/*float right*/
+.f-r{
+    float: right;
+}
+.logout{
+    position: absolute;
+    right: 15px;
+    top: 25px;
+}
+.logout-text{
+    display: none;
+    position: absolute;
+    right: 0px;
+    top: 25px;
+    padding: 6px;
+    font-weight: 700;
+    border-radius: 5px;
+    background: #eaeaea;
+}
+.logout:hover .logout-text{
+    display: block;
+}
+.header{
+    text-align: center;
+    color: #babaec;
+}
+::placeholder {
+  color: rgba(179, 179, 179, 0.7);
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+ color: rgba(179, 179, 179, 0.7);
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+ color: rgba(179, 179, 179, 0.7);
+}
+#sellerBuyerPage label{
+    font-weight: 400;
+}
+.add-category-slider{
+    width: 450px;
+    right: -500px;
+    transition: 2s all;
+    position: fixed;
+    background: white;
+    padding: 10px;
+    top: 130px;
+    border: 2px solid #b2b2d2;
+}
+.toaster{
+    position: absolute;
+    right: 15px;
+    bottom: 0px;
+    border-radius: 10px;
+    transition: 2s all;
+    height: 50px;
+    color: white;
+    width: 300px;
+    padding: 10px;
+}

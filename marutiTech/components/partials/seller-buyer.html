@@ -1,0 +1,81 @@
+<div id="sellerBuyerPage" class="col-md-12">
+    <div ng-if="!buyer">
+            <h1 class="header">Welcome as Seller </h1>
+            <span class="logout">
+                <a class="f-r m-t-5px" href="" ng-click="logout()">
+                    <i class="fa fa-sign-out fa-lg"></i>
+                </a>
+                <span class="logout-text">Logout</span>
+            </span>
+
+        <form name="itemForm" novalidate>
+            <div class="col-md-8 p-l-z">
+                <div class="col-md-4 p-l-z">
+                    <label>Item Name</label>
+                    <input class="col-md-12" type="text" name="" placeholder="Name" ng-model="item.name" min="2" max="20" required>
+                </div>
+                <div class="col-md-4">
+                    <label>Item Price</label>
+                    <input class="col-md-12" type="number" name="" placeholder="Price" ng-model="item.price" min="0" required>
+                </div>
+                <div class="col-md-4 m-b-5px">
+                    <label>Category</label>
+                    <semantic-select  id="categories" name="categories" ng-model="item.categories"
+                                      options="categoriesList" placeholder-text="Select Categories"
+                                      option-value="id" option-name="name">
+                    </semantic-select>
+                </div>
+            </div>
+            <div class="col-md-4 m-t-22px">
+                <button type="button" class="btn-sm btn-success" ng-click="saveItem()">SAVE</button>
+                <button type="button" class="btn-sm btn-primary" ng-click="addCategory()">Add Category</button>
+            </div>
+        </form>
+    </div>
+    <div class="add-category-slider">
+        <h3>Add Category </h3>
+        <label class="col-md-12 p-l-z">Name</label>
+        <div class="col-md-12 p-z-px m-b-10px">
+            <input class="col-md-12" placeholder="Category Name" type="text" name="" ng-model="category.name" min="2" max="20" required>
+        </div>
+        <button type="button" class="btn-success" ng-click="saveCategory()">SAVE</button>
+        <button type="button" class="btn-default" ng-click="closeCategory()">ClOSE</button>
+    </div>
+    <div class="col-md-12 p-z-px" ng-if="buyer">
+        <div><h1 class="header">Welcome as Buyer</h1></div>
+        <div class="col-md-4 p-l-z m-b-5px">
+            <label>Category</label>
+            <semantic-select  id="categories" name="categories" ng-model="subscribe_categories"
+                              options="categoriesList" placeholder-text="Select Categories"
+                              option-value="id" option-name="name" call-back="getFilterItemList">
+            </semantic-select>
+        </div>
+        <span class="logout">
+            <a class="f-r m-t-5px" href="" ng-click="logout()">
+                <i class="fa fa-sign-out fa-lg"></i>
+            </a>
+            <span class="logout-text">Logout</span>
+        </span>
+    </div>
+    <div class="m-t-5px">
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Categories</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="data in itemList">
+                    <td>{{ data.name }}</td>
+                    <td>{{ data.price }}</td>
+                    <td>{{ data.category }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="toaster" ng-show="toaster">
+    {{ toasterMsg }}
+</div>

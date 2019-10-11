@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Maruti Tech</title>
+        <link rel="stylesheet"  href="{% static '/css/bootstrap.min.css' %}" type="text/css">
+        <link rel="stylesheet"  href="{% static '/css/custom.css' %}" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet"  href="{% static '/css/dropdown.css' %}" type="text/css">
+        <link rel="stylesheet"  href="{% static '/css/transition.css' %}" type="text/css">
+        <link rel="stylesheet"  href="{% static '/css/semanticui.css' %}" type="text/css">
+        <script  src="{% static 'js/angular.js' %}"></script>
+        <script  src="{% static 'js/angular-ui-router.js' %}"></script>
+        <script  src="{% static 'js/jquery.min.js' %}"></script>
+        <script  src="{% static 'js/bootstrap.min.js' %}"></script>
+        <script  src="{% static 'js/chosen.js' %}"></script>
+        <script  src="{% static 'js/chosen.jquery.js' %}"></script>
+        <script  src="{% static 'js/dropdown.js' %}"></script>
+        <script  src="{% static 'js/transition.js' %}"></script>
+        <script  src="{% static 'js/angular-cookies.js' %}"></script>
+        <script  src="{% static '/routes.js' %}"></script>
+        <script  src="{% static 'controllers/widget-semanticui.js' %}"></script>
+        <script  src="{% static 'controllers/main-controller.js' %}"></script>
+        <script  src="{% static 'controllers/buyer-seller-controller.js' %}"></script>
+        <script  src="{% static 'controllers/dataservice.js' %}"></script>
+    </head>
+    <body ng-app="myApp">
+        <div ui-view></div>
+    </body>
+</html>
